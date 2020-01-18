@@ -14,7 +14,7 @@ RUN adduser \
 
 ARG TEX_IMAGE=texlive
 ARG TEX_LANGS="german"
-ARG TEX_EXTRA="latex-extra bibtex-extra"
+ARG TEX_EXTRA="latex-extra bibtex-extra extra-utils"
 ARG PYTHON_VERSION=python3
 ARG PYTHON_PACKAGES="pygments"
 ARG MORE_PACKAGES="latexmk"
