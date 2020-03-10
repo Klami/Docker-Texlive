@@ -11,7 +11,7 @@ RUN adduser \
     --gecos "$USER_GECOS" \
     --disabled-password \
     "$USER_NAME"
-USER $USER_NAME
+
 ARG TEX_IMAGE=texlive
 ARG TEX_LANGS="german"
 ARG TEX_EXTRA="latex-extra bibtex-extra extra-utils"
@@ -26,3 +26,5 @@ RUN apt-get update && apt-get install -y \
     $(for i in $PYTHON_PACKAGES;do echo $PYTHON_VERSION"-$i";done) \
     $(for i in $MORE_PACKAGES;do echo "$i";done) \
     && rm -rf /var/lib/apt/lists/*
+
+USER $USER_NAME
