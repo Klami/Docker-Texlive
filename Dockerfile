@@ -11,7 +11,7 @@ RUN adduser \
     --gecos "$USER_GECOS" \
     --disabled-password \
     "$USER_NAME"
-
+USER $USER_NAME
 ARG TEX_IMAGE=texlive
 ARG TEX_LANGS="german"
 ARG TEX_EXTRA="latex-extra bibtex-extra extra-utils"
