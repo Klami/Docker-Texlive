@@ -17,7 +17,7 @@ ARG TEX_LANGS="german"
 ARG TEX_EXTRA="latex-extra bibtex-extra extra-utils"
 ARG PYTHON_VERSION=python3
 ARG PYTHON_PACKAGES="pygments"
-ARG MORE_PACKAGES="latexmk"
+ARG MORE_PACKAGES="latexmk biber"
 
 RUN apt-get update && apt-get install -y \
     $TEX_IMAGE \
