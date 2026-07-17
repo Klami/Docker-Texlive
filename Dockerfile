@@ -5,11 +5,10 @@ ARG USER_HOME=/home/latex
 ARG USER_ID=1000
 ARG USER_GECOS=LaTeX
 
-RUN adduser \
-    --home "$USER_HOME" \
+RUN useradd \
+    --base-dir "$USER_HOME" \
     --uid $USER_ID \
-    --gecos "$USER_GECOS" \
-    --disabled-password \
+    --comment "$USER_GECOS" \
     "$USER_NAME"
 
 ARG TEX_IMAGE=texlive
